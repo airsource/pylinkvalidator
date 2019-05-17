@@ -252,7 +252,7 @@ class PageCrawler(object):
 
         if self.worker_config.username and self.worker_config.password:
             base64string = unicode(
-                base64.encodestring(
+                base64.b64encode(
                     '{0}:{1}'.format(
                         self.worker_config.username,
                         self.worker_config.password)
